@@ -1,0 +1,23 @@
+import { reactive } from "vue";
+import axios from "axios";
+// import { useRoute } from "vue-router";
+
+//const id = route.params.id;
+const state = reactive({
+  events: [],
+});
+
+///api get
+const load_data = () => {
+  axios.get("http://event.proticchobi.xyz/api/events?per_page=5&page=1").then((res) => {
+    state.events = res.data.data; // 👈 get just results
+    console.log(state.events[0]);
+  });
+};
+  load_data()
+
+ export default {
+  state: state
+ }
+
+  

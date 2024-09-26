@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://app.octaglory.com/assets/octaglory/img/favicon-439835d7b8b632e7e0ff9b8909b02d2f.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Management</title>
+</head>
+
+<body>
+<div id="app">
+
+</div>
+<div class="modals-container"></div>
+
+<script type="module" src="/src/main.js"></script>
+<script>
+    // (function (window, document) {
+    //   var loader = function () {
+    //     var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+    //     script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+    //     tag.parentNode.insertBefore(script, tag);
+    //   };
+
+    //   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+    // })(window, document);
+    (function (window, document) {
+        var loader = function () {
+            var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+            // Production URL
+            script.src = "https://seamless-epay.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+            // Sandbox URL
+            // script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+            tag.parentNode.insertBefore(script, tag);
+        };
+
+        window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+    })(window, document);
+</script>
+</body>
+
+</html>
